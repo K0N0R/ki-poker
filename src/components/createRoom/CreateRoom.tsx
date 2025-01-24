@@ -106,9 +106,9 @@ export const CreateRoom: React.FC<CreateRoomProps> = ({ onCreateRoom, onCancel }
           ))}
         </select>
 
-        <div className="form-actions">
-          <button type="submit">Create Room</button>
-          <button type="button" onClick={onCancel} className="cancel-button">
+        <div className="d-flex gap-15">
+          <button className="md-button flex-2" type="submit">Create Room</button>
+          <button className="md-button flex-1" type="button" onClick={onCancel}>
             Cancel
           </button>
         </div>

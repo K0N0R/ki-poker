@@ -1,0 +1,56 @@
+// material-design.scss
+
+// Kolory Material Design
+$primary-color: #6200ea;
+$primary-light-color: #9d46ff;
+$primary-dark-color: #0a00b6;
+$secondary-color: #03dac6;
+$secondary-light-color: #66fff9;
+$secondary-dark-color: #00a896;
+$text-primary-color: #ffffff;
+$text-secondary-color: #000000;
+
+// Styl przycisku
+.md-button {
+  background-color: $primary-color;
+  color: $text-primary-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $primary-dark-color;
+  }
+}
+
+// Styl karty
+.md-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .md-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: $primary-color;
+  }
+
+  .md-card-content {
+    font-size: 16px;
+    color: $text-secondary-color;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // Użyj właściwego importu
-import "./index.scss";
+import "./styles/index.scss";
 import { Planner } from "./components/planner";
 
 const rootElement = document.getElementById("root");

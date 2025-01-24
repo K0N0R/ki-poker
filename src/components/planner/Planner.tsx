@@ -22,7 +22,7 @@ export const Planner: React.FC = () => {
 
         {view === PLANNER_VIEW.LIST && 
             <section>
-                <button onClick={() => setView(PLANNER_VIEW.CREATE_ROOM)}>Create Room</button>
+                <button className="md-button" onClick={() => setView(PLANNER_VIEW.CREATE_ROOM)}>Create Room</button>
                 <RoomsList rooms={rooms}></RoomsList>
             </section>
         }

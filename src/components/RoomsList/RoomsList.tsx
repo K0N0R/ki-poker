@@ -8,18 +8,18 @@ export const RoomsList: React.FC<{rooms: Room[]}> = params => {
   return (
     <div className="rooms-list">
       <h1>Rooms List</h1>
-        <ul>
-          {rooms.map((room) => (
-            <li key={room.id} className="room-item">
-              <div>
-                <strong>{room.name}</strong>
+      <div>
+        {rooms.map((room) => (
+          <div key={room.id} className="md-card">
+              <div className="md-card-title">{room.name}</div>
+              <div className="md-card-content">
                 <p>Hosted by: {room.host}</p>
                 <p>Created at: {room.createdAt}</p>
                 <p>Tasks: {room.tasks.length}</p>
               </div>
-            </li>
-          ))}
-        </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
