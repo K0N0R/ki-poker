@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./RoomsList.scss";
+import "./RoomList.scss";
 import { Room } from "../../model/interfaces";
 
-export const RoomsList: React.FC<{rooms: Room[]}> = params => {
+export const RoomList: React.FC<{rooms: Room[]}> = params => {
   const [rooms] = useState<Room[]>(params.rooms);
 
   return (

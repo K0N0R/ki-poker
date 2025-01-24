@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { CreateRoom } from "../CreateRoom";
+import { CreateRoom } from "../CreateRoom/CreateRoom";
 import "./Planner.scss";
-import { RoomsList } from "../RoomsList/RoomsList";
+import { RoomList } from "../RoomList/RoomList";
 import { PLANNER_VIEW, Room } from "../../model/interfaces";
 
 export const Planner: React.FC = () => {
@@ -23,7 +23,7 @@ export const Planner: React.FC = () => {
         {view === PLANNER_VIEW.LIST && 
             <section>
                 <button className="md-button" onClick={() => setView(PLANNER_VIEW.CREATE_ROOM)}>Create Room</button>
-                <RoomsList rooms={rooms}></RoomsList>
+                <RoomList rooms={rooms}></RoomList>
             </section>
         }
         {view === PLANNER_VIEW.CREATE_ROOM && <CreateRoom onCreateRoom={handleCreateRoom} onCancel={() => setView(PLANNER_VIEW.LIST)} /> }
