@@ -1,39 +1,20 @@
 {
-    "compilerOptions": {
-      "charset": "utf8",
-      "experimentalDecorators": true,
-      "module": "amd",
-      "moduleResolution": "node",
-      "noImplicitAny": true,
-      "noImplicitThis": true,
-      "strict": true,
-      "target": "es5",
-      "rootDir": "src/",
-      "outDir": "dist/",
-      "jsx": "react",
-      "lib": [
-        "es5",
-        "es6",
-        "dom",
-        "es2015.promise"
-      ],
-      "types": [
-        "react",
-        "jest",
-        "node"
-      ],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "allowUmdGlobalAccess": true,
-      "forceConsistentCasingInFileNames": true,
-      "resolveJsonModule": true,
-      "isolatedModules": false,
-      "noEmit": false,
-    },
-    "include": [
-      "src"
-    ]
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "resolveJsonModule": true,
+    "lib": [
+      "ES2023",
+      "DOM"
+    ],
+    
   }
-  
+}
