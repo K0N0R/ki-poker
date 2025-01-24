@@ -1,15 +1,15 @@
 {
   "manifestVersion": 1,
   "id": "planning-rooms-extension",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "Planning Rooms",
-  "publisher": "k0n0r",
+  "publisher": "your-publisher-id",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "A minimal extension to display planning rooms.",
+  "description": "A minimal extension to create and manage planning rooms with work item selection.",
   "categories": ["Azure Boards"],
   "contributions": [
     {
@@ -21,6 +21,18 @@
         "uri": "dist/index.html",
         "icon": {
           "default": "images/icon.png"
+        }
+      }
+    },
+    {
+      "id": "create-room-panel",
+      "type": "ms.vss-web.control",
+      "targets": ["ms.vss-web.project-toolbar"],
+      "properties": {
+        "name": "Create Planning Room",
+        "uri": "dist/create-room.html",
+        "icon": {
+          "default": "images/add-room.png"
         }
       }
     }

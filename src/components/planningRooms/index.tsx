@@ -1,1 +1,1 @@
-export { PlanningRooms } from "./PlanningRooms";
+export { RoomsList } from "./RoomsList";

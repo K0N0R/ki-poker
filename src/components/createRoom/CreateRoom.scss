@@ -1,0 +1,44 @@
+.create-room {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  
+    h1 {
+      margin-bottom: 20px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        margin-top: 10px;
+      }
+  
+      input,
+      select,
+      button {
+        margin-top: 5px;
+        padding: 8px;
+        font-size: 16px;
+      }
+  
+      button {
+        margin-top: 20px;
+        background-color: #0078d4;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+  
+        &:hover {
+          background-color: #005a9e;
+        }
+      }
+    }
+  
+    .status {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  }
