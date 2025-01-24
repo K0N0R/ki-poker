@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { CreateRoom } from "../createRoom";
+import { CreateRoom } from "../CreateRoom";
 import "./Planner.scss";
-import { RoomsList } from "../planningRooms/RoomsList";
+import { RoomsList } from "../RoomsList/RoomsList";
 import { PLANNER_VIEW, Room } from "../../model/interfaces";
 
 export const Planner: React.FC = () => {
   const [rooms, setRooms] = useState<Room[]>([
-    { id: "1", name: "Sprint 1 Planning", host: "John Doe", createdAt: "2025-01-22 10:00" },
-    { id: "2", name: "Feature Planning", host: "Jane Smith", createdAt: "2025-01-22 11:00" },
+    { id: "1", name: "Sprint 1 Planning", host: "John Doe", createdAt: "2025-01-22 10:00", tasks: [] },
+    { id: "2", name: "Feature Planning", host: "Jane Smith", createdAt: "2025-01-22 11:00", tasks: [] },
   ]);
 
   const [view, setView] = useState<PLANNER_VIEW>(PLANNER_VIEW.LIST);

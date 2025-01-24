@@ -1,34 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./CreateRoom.scss";
-
-interface WorkItem {
-  id: number;
-  title: string;
-}
+import { Room, Task } from "../../model/interfaces";
 
 interface CreateRoomProps {
-  onCreateRoom: (newRoom: { id: string; name: string; host: string; createdAt: string; workItems: WorkItem[] }) => void;
+  onCreateRoom: (newRoom: Room) => void;
   onCancel: () => void;
-}
-
-interface PlanningRoom {
-  id: string;
-  name: string;
-  host: string;
-  createdAt: string;
-  workItems: WorkItem[];
 }
 
 export const CreateRoom: React.FC<CreateRoomProps> = ({ onCreateRoom, onCancel }) => {
   const [roomName, setRoomName] = useState("");
-  const [allWorkItems, setAllWorkItems] = useState<WorkItem[]>([]); // Store all work items
-  const [filteredWorkItems, setFilteredWorkItems] = useState<WorkItem[]>([]); // Store filtered items
+  const [allWorkItems, setAllWorkItems] = useState<Task[]>([]); // Store all work items
+  const [filteredWorkItems, setFilteredWorkItems] = useState<Task[]>([]); // Store filtered items
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
     // Fetch initial work items (mocked for now)
-    const mockWorkItems: WorkItem[] = [
+    const mockWorkItems: Task[] = [
       { id: 1, title: "Task 1" },
       { id: 2, title: "Task 2" },
       { id: 3, title: "Task 3" },
@@ -60,12 +48,12 @@ export const CreateRoom: React.FC<CreateRoomProps> = ({ onCreateRoom, onCancel }
       return;
     }
 
-    const newRoom: PlanningRoom = {
+    const newRoom: Room = {
       id: Math.random().toString(36).substring(2, 9),
       name: roomName,
       host: "Current User", // Replace with actual user data if available
       createdAt: new Date().toISOString(),
-      workItems: allWorkItems.filter((item) => selectedItems.includes(item.id)),
+      tasks: allWorkItems.filter((item) => selectedItems.includes(item.id)),
     };
 
     onCreateRoom(newRoom);

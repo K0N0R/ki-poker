@@ -15,6 +15,7 @@ export const RoomsList: React.FC<{rooms: Room[]}> = params => {
                 <strong>{room.name}</strong>
                 <p>Hosted by: {room.host}</p>
                 <p>Created at: {room.createdAt}</p>
+                <p>Tasks: {room.tasks.length}</p>
               </div>
             </li>
           ))}
