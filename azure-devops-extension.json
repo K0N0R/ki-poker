@@ -1,30 +1,28 @@
 {
-    "manifestVersion": 1,
-    "id": "ki-poker",
-    "publisher": "k0n0r",
-    "version": "1.0.0",
-    "name": "KI Poker",
-    "description": "Azure DevOps Extension",
-    "categories": [
-        "Azure Repos",
-        "Azure Boards",
-        "Azure Pipelines",
-        "Azure Test Plans",
-        "Azure Artifacts"
-    ],
-    "targets": [
-        {
-            "id": "Microsoft.VisualStudio.Services"
+  "manifestVersion": 1,
+  "id": "planning-rooms-extension",
+  "version": "0.1.0",
+  "name": "Planning Rooms",
+  "publisher": "k0n0r",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "A minimal extension to display planning rooms.",
+  "categories": ["Azure Boards"],
+  "contributions": [
+    {
+      "id": "planning-rooms-hub",
+      "type": "ms.vss-web.hub",
+      "targets": ["ms.vss-web.project-hub-group"],
+      "properties": {
+        "name": "Planning Rooms",
+        "uri": "dist/index.html",
+        "icon": {
+          "default": "images/icon.png"
         }
-    ],
-    "files": [
-        {
-            "path": "static",
-            "addressable": true
-        },
-        {
-            "path": "dist",
-            "addressable": true
-        }
-    ]
+      }
+    }
+  ]
 }

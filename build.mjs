@@ -2,6 +2,7 @@
 import * as esbuild from 'esbuild'
 import fs from 'node:fs/promises'
 import { existsSync } from 'node:fs'
+import { sassPlugin } from "esbuild-sass-plugin";
 
 
 if (existsSync('./dist')) {
@@ -20,7 +21,8 @@ const config = {
   minify: process.env.PROD ? true : false,
   sourcemap: process.env.PROD ? false : true,
   bundle: true,
-  define: { DEBUG: process.env.PROD ? 'false' : 'true' }
+  define: { DEBUG: process.env.PROD ? 'false' : 'true' },
+  plugins: [sassPlugin()],
 }
 
 if (process.env.WATCH) {
